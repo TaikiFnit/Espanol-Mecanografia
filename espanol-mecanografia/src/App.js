@@ -8,16 +8,16 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {"registers": {}}
+    this.state = {'registers': {}, 'wordlist': {}};
+    this.onClickRegister = this.onClickRegister.bind(this);
+
+    this.url = 'http://localhost:8080';
   }
 
   componentDidMount() {
-    const url = 'http://localhost:8080/registers'
     request
-      .get(url)
+      .get(this.url + "/registers")
       .end((err, res) => {
-        console.log(err);
-        console.log(res.body);
         if(res.body.results) {
           this.setState({"registers": res.body.results})
         }
@@ -25,11 +25,10 @@ class App extends Component {
   }
 
   render() {
-
     let register_list = []
 
     Object.keys(this.state.registers).forEach((key)=> {
-      register_list.push(<li>{key}</li>)
+      register_list.push(<li key={key} onClick={this.onClickRegister}>{key}</li>)
     })
 
     return (
@@ -37,6 +36,22 @@ class App extends Component {
         {register_list}
       </ul>
     );
+  }
+
+  onClickRegister(e) {
+    request
+      .get(this.url + "/wordlist")
+      .query({register: e.target.innerText})
+      .end((err, res) => {
+        if (err) {
+          console.log(err)
+          return
+        }
+        if(res.body.results) {
+          console.log(res.body.results)
+          this.setState({"wordlist": res.body.results})
+        }
+      })
   }
 }
 
