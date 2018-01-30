@@ -18,6 +18,11 @@ class App extends Component {
     request
       .get(this.url + "/registers")
       .end((err, res) => {
+        if (err) {
+          console.log(err)
+          return
+        }
+
         if(res.body.results) {
           this.setState({"registers": res.body.results})
         }
@@ -47,6 +52,7 @@ class App extends Component {
           console.log(err)
           return
         }
+
         if(res.body.results) {
           console.log(res.body.results)
           this.setState({"wordlist": res.body.results})

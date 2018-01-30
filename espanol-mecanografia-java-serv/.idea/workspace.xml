@@ -17,21 +17,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GetRegistersServlet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GetRegistersServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GetRegistersServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+            <state relative-caret-position="540">
+              <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="375">
+              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -306,12 +306,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517318982421</updated>
-      <workItem from="1517318986462" duration="3766000" />
+      <workItem from="1517318986462" duration="4768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3766000" />
+    <option name="totallyTimeSpent" value="4768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="1058" extended-state="0" />
@@ -380,18 +380,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GetRegistersServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        <state relative-caret-position="375">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/GetRegistersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        <state relative-caret-position="540">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding />
         </state>
       </provider>
