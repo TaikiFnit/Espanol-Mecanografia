@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="espanol-mecanografia-java-serv:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="espanol-mecanografia-java-serv/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="espanol-mecanografia-java-serv" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
