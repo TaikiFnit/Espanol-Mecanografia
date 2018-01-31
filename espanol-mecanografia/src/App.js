@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import request from 'superagent';
-import { link } from 'fs';
+import { link, lstat } from 'fs';
+
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBar from 'material-ui/AppBar';
 
 class App extends Component {
 
@@ -37,9 +42,9 @@ class App extends Component {
     })
 
     return (
-      <ul>
-        {register_list}
-      </ul>
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <AppBar title="Español Mecanografía" />
+      </MuiThemeProvider>
     );
   }
 
