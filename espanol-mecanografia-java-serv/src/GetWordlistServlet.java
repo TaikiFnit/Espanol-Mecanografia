@@ -26,22 +26,7 @@ public class GetWordlistServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String register = request.getParameter("register");
-
-        String urlString = "https://od-api.oxforddictionaries.com:443/api/v1/wordlist/es/registers%3D" + register;
-        URL url = new URL(urlString);
-        HttpURLConnection http = (HttpURLConnection)url.openConnection();
-        http.setRequestMethod("GET");
-        http.setRequestProperty("Accept", "application/json");
-        http.setRequestProperty("app_id", app_id);
-        http.setRequestProperty("app_key", app_key);
-        http.connect();
-
-        // サーバーからのレスポンスを標準出力へ出す
-        BufferedReader reader = new BufferedReader(new InputStreamReader(http.getInputStream()));
-        String json = "", line = "";
-        while((line = reader.readLine()) != null) {
-            json += line;
-        }
+        String json = OxfordApiBridging.callApi("wordlist/es/registers%3D" + register);
 
         response.setContentType("application/json;charset=UTF-8");
         response.setHeader("Access-Control-Allow-Origin", "*");

@@ -25,20 +25,8 @@ public class GetRegistersServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        URL url = new URL("https://od-api.oxforddictionaries.com:443/api/v1/registers/es");
-        HttpURLConnection http = (HttpURLConnection)url.openConnection();
-        http.setRequestMethod("GET");
-        http.setRequestProperty("Accept", "application/json");
-        http.setRequestProperty("app_id", app_id);
-        http.setRequestProperty("app_key", app_key);
-        http.connect();
 
-        // サーバーからのレスポンスを標準出力へ出す
-        BufferedReader reader = new BufferedReader(new InputStreamReader(http.getInputStream()));
-        String json = "", line = "";
-        while((line = reader.readLine()) != null) {
-            json += line;
-        }
+        String json = OxfordApiBridging.callApi("/registers/es");
 
         response.setContentType("application/json;charset=UTF-8");
         response.setHeader("Access-Control-Allow-Origin", "*");
