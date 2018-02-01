@@ -9,14 +9,24 @@ import {fade} from 'material-ui/utils/colorManipulator';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import {AppBar, IconButton, IconMenu, MenuItem} from 'material-ui';
+import {AppBar, IconButton, IconMenu, MenuItem, Chip} from 'material-ui';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+
 
 import merge from 'lodash.merge';
 
-const muiTheme = {palette: {primary1Color: grey900, primary2Color: grey900, primary3Color: 800}}
+const muiTheme = {
+  palette: {
+    primary1Color: grey900,
+    primary2Color: grey900,
+    primary3Color: grey800,
+    accent1Color: grey800,
+    accent2Color: grey800,
+  }
+}
 
 class App extends Component {
 
@@ -47,7 +57,7 @@ class App extends Component {
     let register_list = []
 
     Object.keys(this.state.registers).forEach((key)=> {
-      register_list.push(<li key={key} onClick={this.onClickRegister}>{key}</li>)
+      register_list.push(<Chip style={{margin: 4}}>{key}</Chip>)
     })
 
     return (
@@ -56,12 +66,35 @@ class App extends Component {
 
         <div className="columns is-mobile">
         <Card style={{background: grey800}} className="column is-8 is-offset-2" >
-          <CardHeader
-            title="URL Avatar"
-            subtitle="Subtitle"
-          />
 
           <CardTitle title="Card title" subtitle="Card subtitle" />
+
+          <Toolbar style={{marginBottom: 5}}>
+            <ToolbarGroup>
+              <ToolbarTitle text="Registers: " style={{color: fullWhite}}/>
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <div style={{display: 'flex', flexWrap: 'wrap'}}>
+              {register_list}
+              </div>
+            </ToolbarGroup>
+          </Toolbar>
+
+          <Toolbar>
+            <ToolbarGroup>
+              <ToolbarTitle text="Registers: " style={{color: fullWhite}}/>
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <div style={{display: 'flex', flexWrap: 'wrap'}}>
+              {register_list}
+              </div>
+            </ToolbarGroup>
+          </Toolbar>
+
+
+
           <CardText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
@@ -69,8 +102,7 @@ class App extends Component {
             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
           </CardText>
           <CardActions>
-            <FlatButton label="Action1" />
-            <FlatButton label="Action2" />
+            <FlatButton label="¡Empezar!" className="column is-12" style={{fontSize: '30px', fontWeight: 'bold', height: '60px'}} />
           </CardActions>
         </Card>
         </div>
