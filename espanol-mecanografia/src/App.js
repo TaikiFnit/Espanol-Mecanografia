@@ -54,11 +54,11 @@ class App extends Component {
       <MuiThemeProvider muiTheme={getMuiTheme(merge(darkBaseTheme, muiTheme))}>
         <AppBar title="Español Mecanografía" style={{marginBottom: 60, color: fullWhite}} titleStyle={{color: fullWhite}}/>
 
-        <Card style={{background: grey800}} >
+        <div className="columns is-mobile">
+        <Card style={{background: grey800}} className="column is-8 is-offset-2" >
           <CardHeader
             title="URL Avatar"
             subtitle="Subtitle"
-            avatar="images/jsa-128.jpg"
           />
 
           <CardTitle title="Card title" subtitle="Card subtitle" />
@@ -73,6 +73,7 @@ class App extends Component {
             <FlatButton label="Action2" />
           </CardActions>
         </Card>
+        </div>
 
       </MuiThemeProvider>
     );
