@@ -32,15 +32,15 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {'registers': {}, 'wordlist': {}};
+    this.state = {'registers': {}, 'domains': {}, 'lexicalcategories': {}, 'wordlist': {}};
     this.onClickRegister = this.onClickRegister.bind(this);
 
-    this.url = 'http://localhost:8080';
+    this.url = 'http://localhost:8080/api';
   }
 
   componentDidMount() {
     request
-      .get(this.url + "/registers")
+      .get(this.url + "?path=/registers/es")
       .end((err, res) => {
         if (err) {
           console.log(err)
@@ -48,16 +48,53 @@ class App extends Component {
         }
 
         if(res.body.results) {
-          this.setState({"registers": res.body.results})
+          this.setState({'registers': res.body.results})
         }
       })
+
+      request
+      .get(this.url + "?path=/domains/es")
+      .end((err, res) => {
+        if (err) {
+          console.log(err)
+          return
+        }
+
+        if(res.body.results) {
+          this.setState({'domains': res.body.results})
+        }
+      })
+
+      request
+      .get(this.url + "?path=/lexicalcategories/es")
+      .end((err, res) => {
+        if (err) {
+          console.log(err)
+          return
+        }
+
+        if(res.body.results) {
+          this.setState({'lexicalcategories': res.body.results})
+        }
+      }) 
+
   }
 
   render() {
-    let register_list = []
+    let registers = []
+    let domains = []
+    let lexicalcategories = []
 
     Object.keys(this.state.registers).forEach((key)=> {
-      register_list.push(<Chip style={{margin: 4}}>{key}</Chip>)
+      registers.push(<Chip style={{margin: 5}}>{key}</Chip>)
+    })
+
+    Object.keys(this.state.lexicalcategories).forEach((key)=> {
+      lexicalcategories.push(<Chip style={{margin: 5}}>{key}</Chip>)
+    })
+
+    Object.keys(this.state.domains).forEach((key)=> {
+      domains.push(<Chip style={{margin: 5}}>{key}</Chip>)
     })
 
     return (
@@ -69,31 +106,41 @@ class App extends Component {
 
           <CardTitle title="Card title" subtitle="Card subtitle" />
 
-          <Toolbar style={{marginBottom: 5}}>
+          <Toolbar style={{height: 'auto', paddingTop: 5, paddingBottom: 5, marginBottom: 5, justifyContent: 'flex-start' }}>
             <ToolbarGroup>
               <ToolbarTitle text="Registers: " style={{color: fullWhite}}/>
             </ToolbarGroup>
 
-            <ToolbarGroup>
-              <div style={{display: 'flex', flexWrap: 'wrap'}}>
-              {register_list}
+            <ToolbarGroup lastChild={true}>
+              <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row'}}>
+                {registers}
               </div>
             </ToolbarGroup>
           </Toolbar>
 
-          <Toolbar>
+          <Toolbar style={{height: 'auto', paddingTop: 5, paddingBottom: 5, marginBottom: 5, justifyContent: 'flex-start'}}>
             <ToolbarGroup>
-              <ToolbarTitle text="Registers: " style={{color: fullWhite}}/>
+              <ToolbarTitle text="Lexicals: " style={{color: fullWhite, width: 100}}/>
             </ToolbarGroup>
 
-            <ToolbarGroup>
+            <ToolbarGroup style={{height: 'auto'}}>
               <div style={{display: 'flex', flexWrap: 'wrap'}}>
-              {register_list}
+                {lexicalcategories}
               </div>
             </ToolbarGroup>
           </Toolbar>
 
+          <Toolbar style={{height: 'auto', paddingTop: 5, paddingBottom: 5, marginBottom: 5, justifyContent: 'flex-start'}}>
+            <ToolbarGroup>
+              <ToolbarTitle text="Domains:" style={{color: fullWhite, width: 100}}/>
+            </ToolbarGroup>
 
+            <ToolbarGroup style={{height: 'auto'}}>
+              <div style={{display: 'flex', flexWrap: 'wrap'}}>
+                {domains}
+              </div>
+            </ToolbarGroup>
+          </Toolbar>
 
           <CardText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

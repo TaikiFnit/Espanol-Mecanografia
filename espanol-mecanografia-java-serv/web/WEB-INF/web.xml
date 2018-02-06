@@ -5,43 +5,12 @@
          version="3.1">
 
     <servlet>
-        <servlet-name>GetRegisters</servlet-name>
-        <servlet-class>GetRegistersServlet</servlet-class>
-
-        <init-param>
-            <param-name>app_id</param-name>
-            <param-value>0773fb16</param-value>
-        </init-param>
-        
-        <init-param>
-            <param-name>app_key</param-name>
-            <param-value>21c84661c5d69d6ab7bb20c26946c26d</param-value>
-        </init-param>
-    </servlet>
-
-    <servlet>
-        <servlet-name>GetWordlist</servlet-name>
-        <servlet-class>GetWordlistServlet</servlet-class>
-
-        <init-param>
-            <param-name>app_id</param-name>
-            <param-value>0773fb16</param-value>
-        </init-param>
-
-        <init-param>
-            <param-name>app_key</param-name>
-            <param-value>21c84661c5d69d6ab7bb20c26946c26d</param-value>
-        </init-param>
+        <servlet-name>ApiServlet</servlet-name>
+        <servlet-class>ApiServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>GetRegisters</servlet-name>
-        <url-pattern>/registers</url-pattern>
+        <servlet-name>ApiServlet</servlet-name>
+        <url-pattern>/api</url-pattern>
     </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>GetWordlist</servlet-name>
-        <url-pattern>/wordlist</url-pattern>
-    </servlet-mapping>
-
 </web-app>
