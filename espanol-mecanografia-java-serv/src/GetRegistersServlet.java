@@ -33,5 +33,6 @@ public class GetRegistersServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             out.println(json);
         }
+
     }
 }
