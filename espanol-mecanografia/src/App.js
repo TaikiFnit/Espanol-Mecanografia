@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import request from 'superagent';
-import { link, lstat } from 'fs';
 
-import {pinkA200, white, darkBlack, cyan500,  fullBlack, fullWhite, grey100, grey500, grey300, grey900, grey800, grey700, blue600} from 'material-ui/styles/colors';
-import {fade} from 'material-ui/utils/colorManipulator';
+import { fullWhite,  grey900, grey800, grey700,} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import {AppBar, IconButton, IconMenu, MenuItem, Chip} from 'material-ui';
+import {AppBar, IconButton, MenuItem, Chip} from 'material-ui';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
@@ -32,8 +29,10 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    const url = new URL(document.getElementById('root').baseURI)
+    var user_id = url.searchParams.get("id");
+    this.user_id = user_id;
     this.state = {'registers': {}, 'domains': {}, 'lexicalcategories': {}, 'server_words': [], 'order': 0, 'user': "", 'wordlist': [], 'applied': {'registers': {}, 'domains': {}, 'lexicalcategories': {}}};
-    this.onClickRegister = this.onClickRegister.bind(this);
 
     this.url = 'http://localhost:8080/api';
     this.onClickFilter = this.onClickFilter.bind(this);
@@ -94,9 +93,6 @@ class App extends Component {
       filter += ";"
     }
 
-    console.log(filter)
-
-
     request.get(this.url + "?path=/wordlist/es/" + filter)
     .end((err, res) => {
       if (err) {
@@ -113,6 +109,9 @@ class App extends Component {
   }
 
   componentDidMount() {
+
+    this.onClickLogin()
+
     request
       .get(this.url + "?path=/registers/es")
       .end((err, res) => {
@@ -156,7 +155,6 @@ class App extends Component {
 
   onChangeText(e) {
 
-    console.log(this.state.user)
     if (this.state.wordlist.length == 0) {
       return
     }
@@ -164,11 +162,11 @@ class App extends Component {
     if (e.target.value == decodeURI(this.state.wordlist[this.state.order].id)) {
       this.setState({order: (this.state.order + 1), typing: ""})
 
-      if (this.state.user != "") {
+      if (this.user_id != "") {
         request
         .post("http://localhost:8080/words")
         .type('form')
-        .send({"user_id": this.state.user, "word_id": e.target.value})
+        .send({"user_id": this.user_id, "word_id": e.target.value})
         .end((err, res) => {
           if (err) {
             console.log(err)
@@ -176,6 +174,8 @@ class App extends Component {
           }
         })  
       }
+
+      this.onClickLogin()
 
     }else {
      this.setState({"typing": e.target.value })
@@ -189,9 +189,9 @@ class App extends Component {
 
   onClickLogin(e) {
     console.log("onClickLogin")
-    console.log(this.state.user)
+    console.log(this.user_id)
     request
-    .get("http://localhost:8080/words?user_id=" + this.state.user)
+    .get("http://localhost:8080/words?user_id=" + this.user_id)
     .end((err, res) => {
       console.log(res.body)
       if (err) {
@@ -304,16 +304,7 @@ class App extends Component {
         <div className="columns is-mobile" style={{marginBottom: 360}}>
         <Card style={{background: grey800}} className="column is-8 is-offset-2" >
 
-          <CardTitle title="History" subtitle="type your user id"/>
-          <div style={{width: '100%', textAlign: 'center'}}> 
-          <input type="text" style={{background: 'none', borderColor: '#ddd', borderWidth: 1, paddingTop:5, paddingBottom: 5, width: '70%', display: 'inline-block', fontSize: 15, color: 'white'}} onChange={this.onChangeUser} value={this.state.user} placeHolder="id"/>
-          </div>
-
-
-          <CardActions>
-            <FlatButton label="Login!" className="column is-12" style={{fontSize: '30px', fontWeight: 'bold', height: '60px'}} onClick={this.onClickLogin}/>
-          </CardActions>
-
+          <CardTitle title="History"/>
           <CardText>
             <ul>
           {this.state.server_words.map((data) => {
@@ -326,23 +317,6 @@ class App extends Component {
 
       </MuiThemeProvider>
     );
-  }
-
-  onClickRegister(e) {
-    request
-      .get(this.url + "/wordlist")
-      .query({register: e.target.innerText})
-      .end((err, res) => {
-        if (err) {
-          console.log(err)
-          return
-        }
-
-        if(res.body.results) {
-          console.log(res.body.results)
-          this.setState({"wordlist": res.body.results})
-        }
-      });
   }
 }
 

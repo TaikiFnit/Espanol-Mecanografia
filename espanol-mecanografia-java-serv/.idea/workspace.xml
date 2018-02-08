@@ -7,30 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb84b39e-c196-4e31-80f0-15e7ae678c69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FilterServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WordListServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/getWords.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/GetRegistersServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/GetWordlistServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/GetRegistersServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/GetWordlistServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GetRegistersServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GetWordlistServlet.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/DBAccess.class" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/DBAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/DBAccess.class" afterPath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/DBAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/index.css" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/signup.jsp" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/signup.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBAccess.java" afterPath="$PROJECT_DIR$/src/DBAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.css" afterPath="$PROJECT_DIR$/web/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/signup.jsp" afterPath="$PROJECT_DIR$/web/signup.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../espanol-mecanografia/public/index.html" afterPath="$PROJECT_DIR$/../espanol-mecanografia/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../espanol-mecanografia/src/App.js" afterPath="$PROJECT_DIR$/../espanol-mecanografia/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../espanol-mecanografia/src/index.js" afterPath="$PROJECT_DIR$/../espanol-mecanografia/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -416,12 +394,12 @@
       <workItem from="1517919893094" duration="523000" />
       <workItem from="1517993605276" duration="7008000" />
       <workItem from="1518047203278" duration="3320000" />
-      <workItem from="1518056605027" duration="3571000" />
+      <workItem from="1518056605027" duration="3934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27522000" />
+    <option name="totallyTimeSpent" value="27885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="22" width="1885" height="1178" extended-state="6" />
