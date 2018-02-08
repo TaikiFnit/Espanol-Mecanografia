@@ -28,3 +28,4 @@ create table applied_filters(
   foreign key (user_id) references users(id) on delete cascade
 ) ENGINE=INNODB;
 
+alter table applied_filters add filter_category varchar(255);

@@ -7,8 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb84b39e-c196-4e31-80f0-15e7ae678c69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/DBAccess.class" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/DBAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/FilterServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/FilterServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/DBAccess.class" afterPath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/DBAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/FilterServlet.class" afterPath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/FilterServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/createTables.sql" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/classes/createTables.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/espanol_mecanografia_java_serv_war_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/createTables.sql" afterPath="$PROJECT_DIR$/out/production/espanol-mecanografia-java-serv/createTables.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DBAccess.java" afterPath="$PROJECT_DIR$/src/DBAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DeleteFilterServlet.java" afterPath="$PROJECT_DIR$/src/DeleteFilterServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FilterServlet.java" afterPath="$PROJECT_DIR$/src/FilterServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/createTables.sql" afterPath="$PROJECT_DIR$/src/createTables.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../espanol-mecanografia/src/App.js" afterPath="$PROJECT_DIR$/../espanol-mecanografia/src/App.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +46,18 @@
       <file leaf-file-name="FilterServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FilterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteFilterServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DeleteFilterServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,25 +66,35 @@
       <file leaf-file-name="DBAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="212" column="24" lean-forward="false" selection-start-line="212" selection-start-column="24" selection-end-line="212" selection-end-column="24" />
+            <state relative-caret-position="348">
+              <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2669#2677#0" expanded="true" />
                 <element signature="e#5546#5554#0" expanded="true" />
-                <marker date="1518065033732" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
-                <marker date="1518065033732" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
-                <marker date="1518065033732" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
-                <marker date="1518065033732" expanded="true" signature="3596:3607" ph="insert into public" />
-                <marker date="1518065033732" expanded="true" signature="3596:3669" ph="insert into " />
-                <marker date="1518065033732" expanded="true" signature="4390:4408" ph="insert into users... " />
-                <marker date="1518065033732" expanded="true" signature="4390:4438" ph="insert into users... " />
-                <marker date="1518065033732" expanded="true" signature="4390:4458" ph="insert into users... " />
-                <marker date="1518065033732" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
-                <marker date="1518065033732" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
-                <marker date="1518065033732" expanded="true" signature="6337:6399" ph="insert into applied_filters... " />
-                <marker date="1518065033732" expanded="true" signature="7141:7206" ph="delete from " />
+                <marker date="1518066970868" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
+                <marker date="1518066970868" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
+                <marker date="1518066970868" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
+                <marker date="1518066970868" expanded="true" signature="3596:3607" ph="insert into public" />
+                <marker date="1518066970868" expanded="true" signature="3596:3669" ph="insert into " />
+                <marker date="1518066970868" expanded="true" signature="4390:4408" ph="insert into users... " />
+                <marker date="1518066970868" expanded="true" signature="4390:4438" ph="insert into users... " />
+                <marker date="1518066970868" expanded="true" signature="4390:4458" ph="insert into users... " />
+                <marker date="1518066970868" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
+                <marker date="1518066970868" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
+                <marker date="1518066970868" expanded="true" signature="6421:6503" ph="insert into applied_filters... " />
+                <marker date="1518066970868" expanded="true" signature="7293:7358" ph="delete from " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createTables.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/createTables.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,6 +107,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/ApiServlet.java" />
         <option value="$PROJECT_DIR$/src/GetRegistersServlet.java" />
         <option value="$PROJECT_DIR$/web/siginin.jsp" />
-        <option value="$PROJECT_DIR$/src/createTables.sql" />
         <option value="$PROJECT_DIR$/src/SignUpServlet.java" />
         <option value="$PROJECT_DIR$/src/LoginServlet.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
@@ -123,6 +164,8 @@
         <option value="$PROJECT_DIR$/web/getWords.jsp" />
         <option value="$PROJECT_DIR$/src/WordListServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/createTables.sql" />
+        <option value="$PROJECT_DIR$/src/DeleteFilterServlet.java" />
         <option value="$PROJECT_DIR$/src/DBAccess.java" />
         <option value="$PROJECT_DIR$/src/FilterServlet.java" />
       </list>
@@ -141,9 +184,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="246" />
+    <option name="y" value="107" />
     <option name="width" value="1885" />
     <option name="height" value="1178" />
   </component>
@@ -242,6 +285,21 @@
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="60404" />
       </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -379,25 +437,25 @@
       <workItem from="1517919893094" duration="523000" />
       <workItem from="1517993605276" duration="7008000" />
       <workItem from="1518047203278" duration="3320000" />
-      <workItem from="1518056605027" duration="4894000" />
+      <workItem from="1518056605027" duration="6835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28845000" />
+    <option name="totallyTimeSpent" value="30786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="22" width="1885" height="1178" extended-state="6" />
+    <frame x="246" y="107" width="1885" height="1178" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49177718" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.48965517" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39873418" sideWeight="0.5039788" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39873418" sideWeight="0.5082228" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28481013" sideWeight="0.61962867" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28481013" sideWeight="0.61697614" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -406,7 +464,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39873418" sideWeight="0.4960212" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39873418" sideWeight="0.49177718" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -429,14 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ApiServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -445,18 +495,18 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2669#2677#0" expanded="true" />
             <element signature="e#5546#5554#0" expanded="true" />
-            <marker date="1518065033732" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
-            <marker date="1518065033732" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
-            <marker date="1518065033732" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
-            <marker date="1518065033732" expanded="true" signature="3596:3607" ph="insert into public" />
-            <marker date="1518065033732" expanded="true" signature="3596:3669" ph="insert into " />
-            <marker date="1518065033732" expanded="true" signature="4390:4408" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="4390:4438" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="4390:4458" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
-            <marker date="1518065033732" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
-            <marker date="1518065033732" expanded="true" signature="6337:6399" ph="insert into applied_filters... " />
-            <marker date="1518065033732" expanded="true" signature="7141:7206" ph="delete from " />
+            <marker date="1518066970868" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
+            <marker date="1518066970868" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
+            <marker date="1518066970868" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
+            <marker date="1518066970868" expanded="true" signature="3596:3607" ph="insert into public" />
+            <marker date="1518066970868" expanded="true" signature="3596:3669" ph="insert into " />
+            <marker date="1518066970868" expanded="true" signature="4390:4408" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="4390:4438" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="4390:4458" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
+            <marker date="1518066970868" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
+            <marker date="1518066970868" expanded="true" signature="6421:6503" ph="insert into applied_filters... " />
+            <marker date="1518066970868" expanded="true" signature="7293:7358" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -525,18 +575,18 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2669#2677#0" expanded="true" />
             <element signature="e#5546#5554#0" expanded="true" />
-            <marker date="1518065033732" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
-            <marker date="1518065033732" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
-            <marker date="1518065033732" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
-            <marker date="1518065033732" expanded="true" signature="3596:3607" ph="insert into public" />
-            <marker date="1518065033732" expanded="true" signature="3596:3669" ph="insert into " />
-            <marker date="1518065033732" expanded="true" signature="4390:4408" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="4390:4438" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="4390:4458" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
-            <marker date="1518065033732" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
-            <marker date="1518065033732" expanded="true" signature="6337:6399" ph="insert into applied_filters... " />
-            <marker date="1518065033732" expanded="true" signature="7141:7206" ph="delete from " />
+            <marker date="1518066970868" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
+            <marker date="1518066970868" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
+            <marker date="1518066970868" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
+            <marker date="1518066970868" expanded="true" signature="3596:3607" ph="insert into public" />
+            <marker date="1518066970868" expanded="true" signature="3596:3669" ph="insert into " />
+            <marker date="1518066970868" expanded="true" signature="4390:4408" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="4390:4438" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="4390:4458" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
+            <marker date="1518066970868" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
+            <marker date="1518066970868" expanded="true" signature="6421:6503" ph="insert into applied_filters... " />
+            <marker date="1518066970868" expanded="true" signature="7293:7358" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -770,14 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/createTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OxfordApiBridging.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -818,14 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -834,27 +868,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBAccess.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="212" column="24" lean-forward="false" selection-start-line="212" selection-start-column="24" selection-end-line="212" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2669#2677#0" expanded="true" />
-            <element signature="e#5546#5554#0" expanded="true" />
-            <marker date="1518065033732" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
-            <marker date="1518065033732" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
-            <marker date="1518065033732" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
-            <marker date="1518065033732" expanded="true" signature="3596:3607" ph="insert into public" />
-            <marker date="1518065033732" expanded="true" signature="3596:3669" ph="insert into " />
-            <marker date="1518065033732" expanded="true" signature="4390:4408" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="4390:4438" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="4390:4458" ph="insert into users... " />
-            <marker date="1518065033732" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
-            <marker date="1518065033732" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
-            <marker date="1518065033732" expanded="true" signature="6337:6399" ph="insert into applied_filters... " />
-            <marker date="1518065033732" expanded="true" signature="7141:7206" ph="delete from " />
-          </folding>
+        <state relative-caret-position="303">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/createTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -868,10 +894,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeleteFilterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2669#2677#0" expanded="true" />
+            <element signature="e#5546#5554#0" expanded="true" />
+            <marker date="1518066970868" expanded="true" signature="523:574" ph="SELECT * FRO... users" />
+            <marker date="1518066970868" expanded="true" signature="1492:1526" ph="SELECT * FRO... users" />
+            <marker date="1518066970868" expanded="true" signature="2401:2444" ph="select * fro... typed_words" />
+            <marker date="1518066970868" expanded="true" signature="3596:3607" ph="insert into public" />
+            <marker date="1518066970868" expanded="true" signature="3596:3669" ph="insert into " />
+            <marker date="1518066970868" expanded="true" signature="4390:4408" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="4390:4438" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="4390:4458" ph="insert into users... " />
+            <marker date="1518066970868" expanded="true" signature="5274:5303" ph="select * fro... applied_filters" />
+            <marker date="1518066970868" expanded="true" signature="5274:5321" ph="select * fro... applied_filters" />
+            <marker date="1518066970868" expanded="true" signature="6421:6503" ph="insert into applied_filters... " />
+            <marker date="1518066970868" expanded="true" signature="7293:7358" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FilterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
           <folding />
         </state>
       </provider>

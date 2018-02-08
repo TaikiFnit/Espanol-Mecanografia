@@ -54,4 +54,13 @@
         <url-pattern>/filters</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteFilter</servlet-name>
+        <servlet-class>DeleteFilterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteFilter</servlet-name>
+        <url-pattern>/filters/delete</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -33,7 +33,7 @@ class App extends Component {
     const url = new URL(document.getElementById('root').baseURI)
     var user_id = url.searchParams.get("id");
     this.user_id = user_id;
-    this.state = {'open': false, 'open_message': "", 'registers': {}, 'domains': {}, 'lexicalcategories': {}, 'server_words': [], 'order': 0, 'user': "", 'wordlist': [], 'applied': {'registers': {}, 'domains': {}, 'lexicalcategories': {}}};
+    this.state = {'server_applided_filters': [],'open': false, 'open_message': "", 'registers': {}, 'domains': {}, 'lexicalcategories': {}, 'server_words': [], 'order': 0, 'user': "", 'wordlist': [], 'applied': {'registers': {}, 'domains': {}, 'lexicalcategories': {}}};
 
     this.url = 'http://localhost:8080/api';
     this.onClickFilter = this.onClickFilter.bind(this);
@@ -48,8 +48,28 @@ class App extends Component {
     let newState = this.state.applied[category]
     if(key in newState) {
       delete newState[key]
+      request
+      .post("http://localhost:8080/filters/delete")
+      .type('form')
+      .send({"user_id": this.user_id, "filter_name": key, "filter_category": category})
+      .end((err, res) => {
+        if (err) {
+          console.log(err)
+          return
+        }
+      })  
     } else {
       newState[key] = key
+      request
+      .post("http://localhost:8080/filters")
+      .type('form')
+      .send({"user_id": this.user_id, "filter_name": key, "filter_category": category})
+      .end((err, res) => {
+        if (err) {
+          console.log(err)
+          return
+        }
+      })  
     }
 
     this.setState(newState)
@@ -111,6 +131,36 @@ class App extends Component {
   componentDidMount() {
 
     this.onClickLogin()
+
+    request.get("http://localhost:8080/filters?user_id=" + this.user_id )
+    .end((err, res) => {
+      if (err) {
+        console.log(err)
+        return
+      }
+
+      console.log("server applied ")
+      console.log(res.body)
+
+      if(res.body) {
+        // this.setState({'server_applided_filters': res.body})
+        for (let i = 0; i < res.body.length; i++) {
+          console.log("Fa")
+          Object.keys(res.body[i]).forEach((key)=> {
+            this.setState((prevState) => {
+              let newState = prevState
+              let fniKey = res.body[i][key]
+              newState.applied[key][res.body[i][key]] = res.body[i][key]
+              return newState
+            })
+            console.log(this.state.applied)
+            console.log(key)
+            console.log(res.body[i][key])
+
+          });
+        }
+      }
+    })
 
     request
       .get(this.url + "?path=/registers/es")
@@ -215,6 +265,7 @@ class App extends Component {
     let registers = []
     let domains = []
     let lexicalcategories = []
+            console.log(this.state.applied)
 
     Object.keys(this.state.registers).forEach((key)=> {
       const applied_registers = this.state.applied.registers

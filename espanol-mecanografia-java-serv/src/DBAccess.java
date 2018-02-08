@@ -159,6 +159,7 @@ public class DBAccess {
             ArrayList<String> array = new ArrayList<String>();
 
             while (rs.next()) {
+                array.add(rs.getString("filter_category"));
                 array.add(rs.getString("filter_name"));
             }
 
@@ -176,16 +177,17 @@ public class DBAccess {
         }
     }
 
-    public static void insertFilter(String user_id, String filter_name) {
+    public static void insertFilter(String user_id, String filter_name, String filter_category) {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             String url = "jdbc:mysql://localhost/softdex?characterEncoding=UTF-8";
             Connection conn = DriverManager.getConnection(url, "softd", "softd");
 
-            String sql = "insert into applied_filters(user_id, filter_name) values(?, ?)";
+            String sql = "insert into applied_filters(user_id, filter_name, filter_category) values(?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, user_id); //1つ目の？に引数をセットする
             stmt.setString(2, filter_name);
+            stmt.setString(3, filter_category);
             int rs = stmt.executeUpdate();
 
             stmt.close();

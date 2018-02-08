@@ -9,10 +9,12 @@ import java.io.PrintWriter;
 @WebServlet(name = "FilterServlet")
 public class FilterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String user_id = request.getParameter("user_id");
         String filter_name = request.getParameter("filter_name");
+        String filter_category = request.getParameter("filter_category");
 
-        DBAccess.insertFilter(user_id, filter_name);
+        DBAccess.insertFilter(user_id, filter_name, filter_category);
 
         response.setContentType("application/json;charset=UTF-8");
         response.setHeader("Access-Control-Allow-Origin", "*");
@@ -28,9 +30,9 @@ public class FilterServlet extends HttpServlet {
 
         String json = "[";
 
-        for(int i = 0; i < array.length; i++) {
-            json += "\"" + array[i] + "\"";
-            if (i + 1 < array.length) {
+        for(int i = 0; i < array.length; i = i + 2) {
+            json += "{\"" + array[i] + "\": \"" + array[i+1] + "\"}";
+            if (i + 2 < array.length) {
                 json += ",";
             }
         }
@@ -48,6 +50,7 @@ public class FilterServlet extends HttpServlet {
         String user_id = request.getParameter("user_id");
         String filter_name = request.getParameter("filter_name");
 
+        System.out.println("on do delete");
         System.out.println(user_id);
         System.out.println(filter_name);
 
