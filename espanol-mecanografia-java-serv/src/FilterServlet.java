@@ -9,11 +9,22 @@ import java.io.PrintWriter;
 @WebServlet(name = "FilterServlet")
 public class FilterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String user_id = request.getParameter("user_id");
+        String filter_name = request.getParameter("filter_name");
 
+        DBAccess.insertFilter(user_id, filter_name);
+
+        response.setContentType("application/json;charset=UTF-8");
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        try (PrintWriter out = response.getWriter()) {
+            out.println("{}");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String[] array = DBAccess.getFilterList();
+        String user_id = request.getParameter("user_id");
+
+        String[] array = DBAccess.getFilterList(user_id);
 
         String json = "[";
 
@@ -30,6 +41,22 @@ public class FilterServlet extends HttpServlet {
         response.setHeader("Access-Control-Allow-Origin", "*");
         try (PrintWriter out = response.getWriter()) {
             out.println(json);
+        }
+    }
+
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String user_id = request.getParameter("user_id");
+        String filter_name = request.getParameter("filter_name");
+
+        System.out.println(user_id);
+        System.out.println(filter_name);
+
+        DBAccess.deleteFilter(user_id, filter_name);
+
+        response.setContentType("application/json;charset=UTF-8");
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        try (PrintWriter out = response.getWriter()) {
+            out.println("{}");
         }
     }
 }

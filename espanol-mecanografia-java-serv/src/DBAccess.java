@@ -145,14 +145,15 @@ public class DBAccess {
         }
     }
 
-    public static String[] getFilterList() {
+    public static String[] getFilterList(String user_id) {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             String url = "jdbc:mysql://localhost/softdex?characterEncoding=UTF-8";
             Connection conn = DriverManager.getConnection(url, "softd", "softd");
 
-            String sql = "select * from applied_filters";
+            String sql = "select * from applied_filters where user_id = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, user_id); //1つ目の？に引数をセットする
             ResultSet rs = stmt.executeQuery();
 
             ArrayList<String> array = new ArrayList<String>();
@@ -173,4 +174,49 @@ public class DBAccess {
             String[] a = new String[0];
             return a;
         }
-    }}
+    }
+
+    public static void insertFilter(String user_id, String filter_name) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            String url = "jdbc:mysql://localhost/softdex?characterEncoding=UTF-8";
+            Connection conn = DriverManager.getConnection(url, "softd", "softd");
+
+            String sql = "insert into applied_filters(user_id, filter_name) values(?, ?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, user_id); //1つ目の？に引数をセットする
+            stmt.setString(2, filter_name);
+            int rs = stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+
+
+        } catch (Exception e) {
+            System.out.println("FnitError");
+            System.out.println(e);
+        }
+    }
+
+    public static void deleteFilter(String user_id, String filter_name) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            String url = "jdbc:mysql://localhost/softdex?characterEncoding=UTF-8";
+            Connection conn = DriverManager.getConnection(url, "softd", "softd");
+
+            String sql = "delete from applied_filters where user_id = ? and filter_name = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, user_id); //1つ目の？に引数をセットする
+            stmt.setString(2, filter_name);
+            int rs = stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+
+
+        } catch (Exception e) {
+            System.out.println("FnitError");
+            System.out.println(e);
+        }
+    }
+}
