@@ -11,6 +11,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import FlatButton from 'material-ui/FlatButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import Snackbar from 'material-ui/Snackbar';
 
 
 import merge from 'lodash.merge';
@@ -32,7 +33,7 @@ class App extends Component {
     const url = new URL(document.getElementById('root').baseURI)
     var user_id = url.searchParams.get("id");
     this.user_id = user_id;
-    this.state = {'registers': {}, 'domains': {}, 'lexicalcategories': {}, 'server_words': [], 'order': 0, 'user': "", 'wordlist': [], 'applied': {'registers': {}, 'domains': {}, 'lexicalcategories': {}}};
+    this.state = {'open': false, 'open_message': "", 'registers': {}, 'domains': {}, 'lexicalcategories': {}, 'server_words': [], 'order': 0, 'user': "", 'wordlist': [], 'applied': {'registers': {}, 'domains': {}, 'lexicalcategories': {}}};
 
     this.url = 'http://localhost:8080/api';
     this.onClickFilter = this.onClickFilter.bind(this);
@@ -40,6 +41,7 @@ class App extends Component {
     this.onChangeText = this.onChangeText.bind(this);
     this.onChangeUser = this.onChangeUser.bind(this);
     this.onClickLogin = this.onClickLogin.bind(this);
+    this.handleRequestClose = this.handleRequestClose.bind(this);
   }
 
   onClickFilter(e, category, key) {
@@ -66,8 +68,6 @@ class App extends Component {
     if ( Object.keys(this.state.applied.registers).length != 0) {
       filter += ";"
     }
-
-
 
     if ( Object.keys(this.state.applied.domains).length != 0) {
       filter += "domains="
@@ -100,10 +100,10 @@ class App extends Component {
         return
       }
 
-      console.log(res.body.results)
-
       if(res.body.results) {
-        this.setState({'wordlist': res.body.results, 'order': 0})
+        this.setState({'wordlist': res.body.results, 'order': 0, 'open': true, 'open_message': res.body.results.length + " words found"})
+      } else {
+        this.setState({'open': true, 'open_message': "0 words found. Change your filter."})
       }
     })
   }
@@ -153,6 +153,8 @@ class App extends Component {
 
   }
 
+
+
   onChangeText(e) {
 
     if (this.state.wordlist.length == 0) {
@@ -172,10 +174,11 @@ class App extends Component {
             console.log(err)
             return
           }
+
+          this.onClickLogin()
         })  
       }
 
-      this.onClickLogin()
 
     }else {
      this.setState({"typing": e.target.value })
@@ -201,6 +204,12 @@ class App extends Component {
      this.setState({'server_words': res.body})
     })  
   }
+
+  handleRequestClose = () => {
+    this.setState({
+      open: false,
+    });
+  };
 
   render() {
     let registers = []
@@ -233,9 +242,6 @@ class App extends Component {
       }}>{key}
       </Chip>)
     })
-
-    console.log(this.state.server_words)
-
 
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(merge(darkBaseTheme, muiTheme))}>
@@ -314,6 +320,13 @@ class App extends Component {
           </CardText>
         </Card>
         </div>
+
+        <Snackbar
+          open={this.state.open}
+          message={this.state.open_message}
+          autoHideDuration={2000}
+          onRequestClose={this.handleRequestClose}
+        />
 
       </MuiThemeProvider>
     );
