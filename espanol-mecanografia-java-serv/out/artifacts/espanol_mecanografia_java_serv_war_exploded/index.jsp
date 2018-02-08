@@ -9,14 +9,22 @@
 <html>
   <head>
     <title>Login</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
   </head>
   <body>
   <form action="/login" method="POST">
+    <div class="form-group">
     <input type="text" name="name" placeholder="name">
+    </div>
+    <div class="form-group">
     <input type="password" name="password" placeholder="password">
+    </div>
+    <div class="form-group">
     <input type="submit">
+    </div>
+    <div class="form-group">
+    <a href="/signup.jsp">or Sign Up</a>
+    </div>
   </form>
-  <a href="/signup.jsp"></a>
   </body>
 </html>

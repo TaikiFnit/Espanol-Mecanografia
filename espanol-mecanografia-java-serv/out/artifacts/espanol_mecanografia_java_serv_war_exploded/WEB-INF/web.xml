@@ -33,4 +33,25 @@
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Words</servlet-name>
+        <servlet-class>WordListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Words</servlet-name>
+        <url-pattern>/words</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Filter</servlet-name>
+        <servlet-class>FilterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Filter</servlet-name>
+        <url-pattern>/filters</url-pattern>
+    </servlet-mapping>
+
 </web-app>

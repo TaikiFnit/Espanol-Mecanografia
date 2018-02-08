@@ -9,14 +9,14 @@
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
+
 <form action="/signup" method="POST">
     <input type="text" name="name" placeholder="name">
     <input type="password" name="password" placeholder="password">
     <input type="submit">
 </form>
-<a href="/signup.jsp">Sign up</a>
 </body>
 </html>
