@@ -4,8 +4,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class OxfordApiBridging {
-    static String app_key = "21c84661c5d69d6ab7bb20c26946c26d";
-    static String app_id = "0773fb16";
+    static String app_key = "your_app_key";
+    static String app_id = "your_app_id";
 
     static String callApi(String path) {
         try {

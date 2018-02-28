@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>Login</title>
     <link rel="stylesheet" href="/index.css">
   </head>
-  <body>
+  <body style="text-align: center;">
+  <h1 style="color: white; margin: 30px">Español Mecanografía Login</h1>
   <form action="/login" method="POST">
     <div class="form-group">
     <input type="text" name="name" placeholder="name">

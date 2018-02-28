@@ -11,12 +11,19 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="/index.css">
 </head>
-<body>
+<body style="text-align: center">
 
+<h1 style="color: white; margin: 30px">Español Mecanografía Sign Up</h1>
 <form action="/signup" method="POST">
+    <div class="form-group">
     <input type="text" name="name" placeholder="name">
+    </div>
+    <div class="form-group">
     <input type="password" name="password" placeholder="password">
+    </div>
+    <div class="form-group">
     <input type="submit">
+    </div>
 </form>
 </body>
 </html>
