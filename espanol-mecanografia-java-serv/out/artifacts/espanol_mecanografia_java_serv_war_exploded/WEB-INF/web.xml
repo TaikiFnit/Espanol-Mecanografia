@@ -5,43 +5,62 @@
          version="3.1">
 
     <servlet>
-        <servlet-name>GetRegisters</servlet-name>
-        <servlet-class>GetRegistersServlet</servlet-class>
-
-        <init-param>
-            <param-name>app_id</param-name>
-            <param-value>0773fb16</param-value>
-        </init-param>
-        
-        <init-param>
-            <param-name>app_key</param-name>
-            <param-value>21c84661c5d69d6ab7bb20c26946c26d</param-value>
-        </init-param>
+        <servlet-name>ApiServlet</servlet-name>
+        <servlet-class>ApiServlet</servlet-class>
     </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ApiServlet</servlet-name>
+        <url-pattern>/api</url-pattern>
+    </servlet-mapping>
 
     <servlet>
-        <servlet-name>GetWordlist</servlet-name>
-        <servlet-class>GetWordlistServlet</servlet-class>
-
-        <init-param>
-            <param-name>app_id</param-name>
-            <param-value>0773fb16</param-value>
-        </init-param>
-
-        <init-param>
-            <param-name>app_key</param-name>
-            <param-value>21c84661c5d69d6ab7bb20c26946c26d</param-value>
-        </init-param>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>GetRegisters</servlet-name>
-        <url-pattern>/registers</url-pattern>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>SignUpServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
-        <servlet-name>GetWordlist</servlet-name>
-        <url-pattern>/wordlist</url-pattern>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Words</servlet-name>
+        <servlet-class>WordListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Words</servlet-name>
+        <url-pattern>/words</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Filter</servlet-name>
+        <servlet-class>FilterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Filter</servlet-name>
+        <url-pattern>/filters</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteFilter</servlet-name>
+        <servlet-class>DeleteFilterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteFilter</servlet-name>
+        <url-pattern>/filters/delete</url-pattern>
+    </servlet-mapping>
 </web-app>
